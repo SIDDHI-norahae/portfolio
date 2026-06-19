@@ -1,0 +1,220 @@
+:root {
+  --bg-dark-core: #050508;
+  --text-vibrant: #ffffff;
+  --text-dimmed: #94a3b8;
+  --neon-indigo: #6366f1;
+  --neon-emerald: #10b981;
+  --neon-amber: #f59e0b;
+  --glass-canvas: rgba(255, 255, 255, 0.01);
+  --border-glow: rgba(255, 255, 255, 0.05);
+  --font-system: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark-core);
+  color: var(--text-vibrant);
+  font-family: var(--font-system);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.plasma-aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle 450px at var(--mouse-x) var(--mouse-y), rgba(99, 102, 241, 0.15), transparent 80%),
+    radial-gradient(circle 200px at var(--mouse-x) var(--mouse-y), rgba(16, 185, 129, 0.1), transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  transition: background 0.1s ease-out;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.bento-panel {
+  background: var(--glass-canvas);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--border-glow);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 250px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.bento-panel:hover::before {
+  opacity: 1;
+}
+
+.bento-panel:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 40px rgba(5, 5, 8, 0.5), 0 0 30px rgba(99, 102, 241, 0.05);
+  transform: translateY(-2px);
+}
+
+.sticker-polaroid {
+  background: #ffffff;
+  padding: 0.75rem 0.75rem 1.75rem 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(0,0,0,0.05);
+  width: 140px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: grab;
+  position: relative;
+}
+
+.sticker-polaroid:active {
+  cursor: grabbing;
+}
+
+.sticker-image-frame {
+  width: 100%;
+  height: 110px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0.6rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.sticker-image-frame::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15));
+}
+
+.polaroid-caption {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  color: #0f172a;
+  text-align: center;
+  display: block;
+  letter-spacing: -0.2px;
+}
+
+.interactive-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glow);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.interactive-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+section {
+  padding: 8rem 0 4rem 0;
+}
+
+.headline-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spec-box {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-glow);
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: var(--neon-indigo);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--neon-indigo);
+  animation: mini-pulse 2s infinite ease-in-out;
+}
+
+@keyframes mini-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.snapshot-link {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  transition: color 0.2s ease;
+}
+
+.snapshot-link:hover {
+  color: var(--neon-indigo);
+}
+
+.gateway-anchor {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--neon-indigo);
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.gateway-anchor:hover {
+  opacity: 0.8;
+}
+
+/* Download CV Modern Frame styling from image_ea4068.png */
+.download-cv-btn {
+  text-decoration: none;
+  border: 1px solid var(--border-glow);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.download-cv-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
