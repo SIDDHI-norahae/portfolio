@@ -103,7 +103,7 @@ export default function App() {
             <motion.div variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0 } }} style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: 'linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%)', border: '1px solid rgba(99, 102, 241, 0.3)', padding: '0.5rem 1.2rem', borderRadius: '100px', marginBottom: '2rem' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--neon-emerald)', boxShadow: '0 0 10px var(--neon-emerald)', display: 'inline-block' }}></span>
               <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#fff', letterSpacing: '1.2px', textTransform: 'uppercase' }}>
-                🚀 Computer Engineering Graduate • Pillai HOC
+                Computer Engineering Graduate
               </span>
             </motion.div>
 
