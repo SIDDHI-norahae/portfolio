@@ -366,7 +366,7 @@ export default function App() {
 
                 <div style={{ display: 'flex', gap: '1.5rem', paddingLeft: '0.5rem', marginTop: '0.5rem' }}>
                   <a href="https://linkedin.com/in/siddhi-gharat-3314802a6" target="_blank" rel="noopener noreferrer" className="gateway-anchor">LinkedIn Hub ↗</a>
-                  <a href="https://github.com/SIDDHI-noraha" target="_blank" rel="noopener noreferrer" className="gateway-anchor" style={{ color: 'var(--text-dimmed)' }}>GitHub Repos ↗</a>
+                  <a href="https://github.com/SIDDHI-norahae" target="_blank" rel="noopener noreferrer" className="gateway-anchor" style={{ color: 'var(--text-dimmed)' }}>GitHub ↗</a>
                 </div>
               </div>
 
