@@ -120,7 +120,8 @@ export default function App() {
               <a href="#work" className="explore-btn" style={{ textDecoration: 'none', background: 'var(--neon-indigo)', color: '#fff', padding: '1rem 2rem', borderRadius: '12px', fontSize: '0.85rem', fontWeight: 700, boxShadow: '0 10px 30px rgba(99,102,241,0.25)' }}>
                 Explore Production Desk
               </a>
-              <a href="/Siddhi_Gharat_Resume.pdf" download="Siddhi_Gharat_Resume.pdf" className="download-cv-btn">
+              <a 
+                href="./Siddhi_Gharat_Resume.pdf" download="Siddhi_Gharat_Resume.pdf" className="download-cv-btn"  style={{ textDecoration: 'none', background: 'rgba(255,255,255,0.05)', color: '#fff', padding: '1rem 2rem', borderRadius: '12px', fontSize: '0.85rem', fontWeight: 700, border: '1px solid var(--border-glow)' }}>
                 Download CV
               </a>
             </motion.div>
